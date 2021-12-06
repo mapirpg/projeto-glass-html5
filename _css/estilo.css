@@ -1,0 +1,244 @@
+/* Configuração de padrões */
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@1,200&display=swap');
+@font-face {
+    font-family: 'fonteLogo';
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+/* Formatação de todos os parágrafos da página */
+p {
+    text-align: justify;
+    text-indent: 50px;
+}
+/* Formatação genérica de todos os links da página */
+a {
+    color: gray;
+    text-decoration: none;
+}
+/* Ao "passar do mouse" sobre o link, ficar com sombra e sublinhado */
+a:hover{
+    text-shadow: .5px .5px 1px black;
+    text-decoration: underline;
+}
+/* Formatação da imagem "óculos" no cabeçalho (à direita) */
+header#cabecalho img#icone{
+    position: absolute;
+    left: 880px;
+    top: 70px;
+}
+/* Formatação do cabeçalho (à esquerda) */
+header#cabecalho h1{
+    font-family: 'fonteLogo', sans-serif;
+    font-size: 30pt;
+    color: rgba(0, 0, 0, 0.568);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    padding: 0px;
+    margin-bottom: 0px;
+}
+header#cabecalho h2{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 15pt;
+    color: rgba(0, 0, 0, 0.514);
+    padding: 0px;
+    margin-top: 0px;
+}
+header#cabecalho {
+    border-bottom: 1px gray dotted;
+    height: 150px;
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;
+}
+/* Formatação do "fundo" do site */
+body{
+    font-family: Arial, sans-serif;
+    background-color: rgb(82, 81, 81);
+    color: rgb(0, 0, 0);
+}
+/* Formatação da interface "frente" do site */
+div#interface{
+    width: 900px;
+    background-color: white;
+    margin:-20px auto 0px auto; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.459);
+    padding: 10px;
+}
+/* Formatação de imagens com legendas */
+figure.fotoComLegenda{
+    position: relative;
+    border: 8px solid white;
+    box-shadow: 1px 1px 4px black;
+}
+figure.fotoComLegenda img{
+    width: 100%;
+    height: 100%;
+}
+figure.fotoComLegenda figcaption{
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: opacity 1s;
+    font: bolder 12pt ;
+}
+figure.fotoComLegenda:hover figcaption{
+    opacity: 1;
+}
+/* Formatação do menu superior */
+nav#menu{
+    display: block;
+}
+
+/* --Formatação da "lista" de itens do menu superior */
+nav#menu ul {
+    list-style: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: -20px;
+    left: 380px;
+}
+
+/* --Formatação dos itens do menu superior */
+nav#menu li{
+    display: inline-block;
+    background-color: rgb(190, 189, 189);
+    padding: 10px;
+    margin: 2px;
+    transition: background-color 1s;
+}
+
+/* --Configuração do "passar com o mouse"  */
+nav#menu li:hover{
+    background-color: rgba(0, 0, 0, 0.900);
+}
+
+/* --Texto "Menu Principal" que é escondido na interface, mas é importante que esteja na página para ajudar algoritmos de busca */
+nav#menu h1{
+    display: none;
+}
+
+/* --Formatação dos links do menu */
+nav#menu a{
+    color: black;
+    text-decoration: none;
+}
+nav#menu a:hover{
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+
+/* Separação do corpo do site em dois blocos. "section" é o bloco esquerdo */
+section#corpo{
+    display: block;
+    width: 500px;
+    float: left;
+    border-right: 1px gray dotted;
+    padding-right: 15px;
+}
+
+/* --Formatação do artigo "article", dentro da section */
+article#noticiaPrincipal h2{
+    font-size: 13pt;
+    color: rgb(5, 5, 5);
+    background-color: rgb(143, 137, 137);
+    padding: 5px 0px 5px 12px;
+    margin: 10px 0px 10px 0px;
+}
+/* --Formatação do cabeçalho "header" dentro do artigo, que está dentdo da seção - 'section/article/header' */
+header#cabecalhoArtigo h1{
+    font-family: 'fonteLogo', sans-serif;
+    font-size: 20pt;
+    color:rgb(68, 67, 67);
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+header#cabecalhoArtigo h2{
+    font-size: 13pt;
+    color:rgb(78, 77, 77);
+    background-color: white;
+    margin: 0px;
+}
+header#cabecalhoArtigo h3{
+    font-size: 11pt;
+    color: rgba(0, 0, 0, 0.603);
+    }
+/* --Classe genérica "direita", para tudo que tiver a classe "direita" */
+.direita{
+    text-align: right;
+}
+
+/* --Formatação da tabela de especificações técnicas */
+table#tabelaSpec{
+    border: 2px  rgb(51, 50, 50) solid;
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+table#tabelaSpec td{
+    border: 2px  rgb(51, 50, 50) solid;
+    padding: 10px;
+    vertical-align: top;
+}
+
+/* --Separação das células da tabela em 'classes', sendo ce == "coluna da esquerda" e cd == "coluna da direita". A definição das classes foi feita nas próprias tags do HTML*/
+table#tabelaSpec td.ce{
+    color: white;
+    background-color: rgb(51, 50, 50);
+    text-align: right;
+}
+table#tabelaSpec td.cd{
+    background-color: gray;
+    text-align: left;
+}
+
+/* --Formatação do cabeçalho da tabela */
+table#tabelaSpec caption{
+    color: rgb(68, 67, 67);
+    font-size: 13pt;
+    font-weight: bolder;  
+}
+
+/* --Foarmatação do texto "Mar/2013" no canto superior direito da tabela */
+table#tabelaSpec caption span{
+    display: block;
+    float: right;
+    color: rgb(68, 67, 67);
+    font-size: 8pt;
+    margin-top: 8px;
+}
+
+/* Segundo bloco da interface "aside" é o bloco do lado direito */
+aside#lateral{
+    display: block;
+    width: 350px;
+    float: right;
+    background-color: rgb(235, 226, 226);
+    padding: 10px;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.534);
+}
+aside#lateral h1{
+    font-family: 'fonteLogo', sans-serif;
+    font-size: 17pt;
+    /* background-color: rgb(190, 182, 182); */
+    padding: 5px 0px 5px 12px;
+    margin-top: 0px;
+}
+aside#lateral h2{
+    font-size: 13pt;
+    color: white;
+    background-color: rgb(143, 137, 137);
+    padding: 5px 0px 5px 12px;
+    margin: 10px;
+}
+/* Formatação do rodapé. Os links para o Facebook e Twitter foram inseridos nas tags do HTML */
+footer#rodape{
+    clear: both;
+    border-top: 1px gray dotted;
+}
+footer#rodape p{
+    text-align: center;
+}
